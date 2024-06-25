@@ -9,18 +9,13 @@
         }
         .container {
             display: flex;
+            justify-content: space-between;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-        .left, .right {
-            padding: 20px;
-        }
-        .left {
-            width: 40%;
-        }
-        .right {
-            width: 60%;
+        .left-side, .right-side {
+            width: 48%;
         }
         .field {
             margin-bottom: 15px;
@@ -39,20 +34,18 @@
             cursor: pointer;
         }
         .response {
+            margin-top: 20px;
             padding: 10px;
             border: 1px solid #ccc;
             background: #f9f9f9;
+            height: 100%;
+            overflow-y: auto;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="right">
-            <div class="response" id="response">
-                Ответ методов будет отображаться здесь.
-            </div>
-        </div>
-        <div class="left">
+        <div class="left-side">
             <h1>GREEN-API Demo</h1>
             <div class="field">
                 <label for="idInstance">ID Instance</label>
@@ -83,6 +76,11 @@
                 <button onclick="getStateInstance()">getStateInstance</button>
                 <button onclick="sendMessage()">sendMessage</button>
                 <button onclick="sendFileByUrl()">sendFileByUrl</button>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="response" id="response">
+                Ответ методов будет отображаться здесь.
             </div>
         </div>
     </div>
